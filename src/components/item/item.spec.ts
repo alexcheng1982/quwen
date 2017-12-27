@@ -1,17 +1,17 @@
-import { TestBed, async, ComponentFixture } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { ItemComponent } from './item';
+import {async, ComponentFixture} from '@angular/core/testing';
+import {By} from '@angular/platform-browser';
+import {ItemComponent} from './item';
+import {TestUtils} from "../../test-utils";
 
 describe('ItemComponent', () => {
   let fixture: ComponentFixture<ItemComponent>;
   let component: ItemComponent;
 
   beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ ItemComponent ],
-    }).compileComponents();
-    fixture = TestBed.createComponent(ItemComponent);
-    component = fixture.componentInstance;
+    TestUtils.beforeEachCompiler([ ItemComponent ]).then((result) => {
+      fixture = result.fixture;
+      component = result.component;
+    });
   }));
 
   it('should display item info', async(() => {

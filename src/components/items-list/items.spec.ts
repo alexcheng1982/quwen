@@ -1,8 +1,9 @@
-import { async, ComponentFixture, TestBed } from "@angular/core/testing";
-import { By } from '@angular/platform-browser';
-import { ItemsListComponent } from './items-list';
-import { Item } from "../../models/item";
-import { ItemComponent } from "../item/item";
+import {async, ComponentFixture} from "@angular/core/testing";
+import {By} from '@angular/platform-browser';
+import {ItemsListComponent} from './items-list';
+import {Item} from "../../models/item";
+import {ItemComponent} from "../item/item";
+import {TestUtils} from "../../test-utils";
 
 function createItems(n: number): Item[] {
   const items = [];
@@ -22,13 +23,10 @@ describe('ItemsListComponent', () => {
   let fixture: ComponentFixture<ItemsListComponent>;
   let component: ItemsListComponent;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ ItemsListComponent, ItemComponent ],
-    }).compileComponents();
-    fixture = TestBed.createComponent(ItemsListComponent);
-    component = fixture.componentInstance;
-  }));
+  beforeEach(async(() => TestUtils.beforeEachCompiler([ItemsListComponent, ItemComponent]).then((result => {
+    fixture = result.fixture;
+    component = result.component;
+  }))));
 
   it('should display items', async(() => {
     component.itemsList = {
