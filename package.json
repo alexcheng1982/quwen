@@ -1,15 +1,17 @@
 {
   "name": "quwen",
   "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "http://ionicframework.com/",
+  "author": "Fu Cheng",
+  "homepage": "https://vividcode.io",
   "private": true,
   "scripts": {
     "clean": "ionic-app-scripts clean",
-    "build": "ionic-app-scripts build",
-    "lint": "ionic-app-scripts lint",
+    "build": "ng build --prod",
+    "lint": "ng lint",
     "ionic:build": "ionic-app-scripts build",
-    "ionic:serve": "ionic-app-scripts serve"
+    "ionic:serve": "ionic-app-scripts serve",
+    "test": "ng test",
+    "e2e": "ng e2e"
   },
   "dependencies": {
     "@angular/common": "5.0.3",
@@ -38,10 +40,27 @@
     "zone.js": "0.8.18"
   },
   "devDependencies": {
+    "@angular/cli": "1.6.2",
+    "@angular/language-service": "^5.0.0",
     "@ionic/app-scripts": "3.1.5",
+    "@types/jasmine": "~2.5.53",
+    "@types/jasminewd2": "~2.0.2",
+    "@types/node": "~6.0.60",
+    "codelyzer": "^4.0.1",
+    "jasmine-core": "~2.6.2",
+    "jasmine-spec-reporter": "~4.1.0",
+    "karma": "~1.7.0",
+    "karma-chrome-launcher": "~2.1.1",
+    "karma-cli": "~1.0.1",
+    "karma-coverage-istanbul-reporter": "^1.2.1",
+    "karma-jasmine": "~1.1.0",
+    "karma-jasmine-html-reporter": "^0.2.2",
+    "protractor": "^5.2.2",
+    "ts-node": "~3.2.0",
+    "tslint": "~5.7.0",
     "typescript": "2.4.2"
   },
-  "description": "An Ionic project",
+  "description": "Quwen - A news reader",
   "cordova": {
     "plugins": {
       "ionic-plugin-keyboard": {},
