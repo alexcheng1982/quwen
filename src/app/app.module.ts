@@ -4,20 +4,20 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
-
+import { WechatPopularPage } from '../pages/wechat-popular/wechat-popular'
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { HTTP } from '@ionic-native/http';
 import { ItemsListComponent } from '../components/items-list/items-list';
 import { ItemComponent } from '../components/item/item';
-import {ItemsListService} from "../services/ItemsListService";
+import { ItemsListService } from "../services/ItemsListService";
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    ListPage,
+    WechatPopularPage,
     ItemsListComponent,
     ItemComponent,
   ],
@@ -29,13 +29,14 @@ import {ItemsListService} from "../services/ItemsListService";
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage,
+    WechatPopularPage,
     ItemsListComponent,
     ItemComponent,
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    HTTP,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ItemsListService,
   ]

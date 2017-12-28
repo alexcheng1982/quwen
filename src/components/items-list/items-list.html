@@ -1,5 +1,5 @@
 <ion-list *ngIf="itemsList">
-  <ion-item *ngFor="let item of itemsList.items">
+  <ion-item text-wrap *ngFor="let item of itemsList.items">
     <quwen-item [item]="item"></quwen-item>
   </ion-item>
 </ion-list>

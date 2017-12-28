@@ -15,6 +15,14 @@ export class HomePage implements OnInit {
   }
 
   ngOnInit(): void {
-    this.itemsList = this.itemsListService.load();
+    this.itemsList = this.itemsListService.load('https://vividcode.io/quwen/news.json', data => {
+      return data.showapi_res_body.pagebean.contentlist.map(item => ({
+        id: item.id,
+        title: item.title,
+        author: item.source,
+        date: item.pubDate,
+        url: item.link,
+      }));
+    });
   }
 }

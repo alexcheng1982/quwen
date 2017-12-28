@@ -159,6 +159,10 @@
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/@ionic-native/core/-/core-4.4.0.tgz#fb0f071543bd2725d858f5a0f5c20adbece20df4"
 
+"@ionic-native/http@^4.5.2":
+  version "4.5.2"
+  resolved "https://registry.yarnpkg.com/@ionic-native/http/-/http-4.5.2.tgz#f0d9e2e82700d01a7794757226c73ce70f7d7f71"
+
 "@ionic-native/splash-screen@4.4.0":
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/@ionic-native/splash-screen/-/splash-screen-4.4.0.tgz#81ed723d7fd3f0d643072b5461fa0c32dcc330b1"
@@ -1383,9 +1387,17 @@ cordova-ios@4.5.4:
     xcode "^0.9.0"
     xml-escape "^1.1.0"
 
+cordova-plugin-advanced-http@^1.9.0:
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/cordova-plugin-advanced-http/-/cordova-plugin-advanced-http-1.9.0.tgz#2554009f3d2a51047a0993ee0843229e632c0ce7"
+
 cordova-plugin-device@^1.1.4:
   version "1.1.7"
   resolved "https://registry.yarnpkg.com/cordova-plugin-device/-/cordova-plugin-device-1.1.7.tgz#fc94111be6932628c66868938ddf3dc82c9fbfe6"
+
+cordova-plugin-file@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/cordova-plugin-file/-/cordova-plugin-file-6.0.0.tgz#9ae08ddbbc0cf33ea06ec303d5ebc55698d760aa"
 
 cordova-plugin-ionic-webview@^1.1.16:
   version "1.1.16"

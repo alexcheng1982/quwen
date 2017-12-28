@@ -1,5 +1,4 @@
 import { Item, ItemsList } from "../models/item";
-import { ItemsListService } from "../services/ItemsListService";
 
 function createItems(n: number): Item[] {
   const items = [];
@@ -15,7 +14,7 @@ function createItems(n: number): Item[] {
   return items;
 }
 
-export class ItemsListServiceMock extends ItemsListService{
+export class ItemsListServiceMock {
   loadSync(): ItemsList {
     return {
       items: createItems(10),

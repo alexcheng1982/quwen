@@ -1,17 +1,21 @@
-import { ItemsList } from "../models/item";
+import { Item, ItemsList } from "../models/item";
+import { Injectable } from "@angular/core";
+import { HTTP } from '@ionic-native/http';
+import { Platform } from "ionic-angular";
 
+@Injectable()
 export class ItemsListService {
-  load(): Promise<ItemsList> {
-    return Promise.resolve({
-      items: [
-        {
-          title: '测试标题',
-          author: '作者',
-          date: '2017-12-27',
-          id: '1',
-          url: 'http://example.com/1',
-        }
-      ]
+
+  constructor(private platform: Platform, private http: HTTP) {}
+
+  load(url: string, converter: (data: any) => Item[]): Promise<ItemsList> {
+    return this.platform.ready().then(() => {
+      return this.http.get(url, {}, {}).then(res => {
+        let data = JSON.parse(res.data);
+        return {
+          items: converter(data),
+        };
+      });
     });
   }
 }
