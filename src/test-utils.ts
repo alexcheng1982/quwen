@@ -5,6 +5,19 @@ import {
   Platform
 } from 'ionic-angular';
 
+class DomControllerMock extends DomController {
+  public read(): any {}
+  public write(): any {}
+}
+
+class PlatformMock extends Platform {
+  public registerListener(): any {}
+
+  win(): Window {
+    return window;
+  }
+}
+
 export class TestUtils {
 
   public static beforeEachCompiler(components: Array<any>, providers: Array<any> = []): Promise<{fixture: any, component: any}> {
@@ -26,13 +39,13 @@ export class TestUtils {
       providers: [
         App,
         Config,
-        DomController,
+        { provide: DomController, useClass: DomControllerMock },
         Form,
         Keyboard,
         MenuController,
         NavController,
         GestureController,
-        Platform,
+        { provide: Platform, useClass: PlatformMock },
         ...providers,
       ],
       imports: [

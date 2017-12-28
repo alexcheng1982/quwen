@@ -3,10 +3,10 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title>首页</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <quwen-items-list [itemsList]="itemsList"></quwen-items-list>
+  <quwen-items-list [itemsList]="itemsList | async"></quwen-items-list>
 </ion-content>

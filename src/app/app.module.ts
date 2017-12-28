@@ -11,6 +11,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ItemsListComponent } from '../components/items-list/items-list';
 import { ItemComponent } from '../components/item/item';
+import {ItemsListService} from "../services/ItemsListService";
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { ItemComponent } from '../components/item/item';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ItemsListService,
   ]
 })
 export class AppModule {}
