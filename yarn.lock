@@ -163,6 +163,10 @@
   version "4.5.2"
   resolved "https://registry.yarnpkg.com/@ionic-native/http/-/http-4.5.2.tgz#f0d9e2e82700d01a7794757226c73ce70f7d7f71"
 
+"@ionic-native/in-app-browser@^4.5.2":
+  version "4.5.2"
+  resolved "https://registry.yarnpkg.com/@ionic-native/in-app-browser/-/in-app-browser-4.5.2.tgz#3eebc77cb579292357ef9860fca254dea59ecce8"
+
 "@ionic-native/splash-screen@4.4.0":
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/@ionic-native/splash-screen/-/splash-screen-4.4.0.tgz#81ed723d7fd3f0d643072b5461fa0c32dcc330b1"
@@ -1398,6 +1402,10 @@ cordova-plugin-device@^1.1.4:
 cordova-plugin-file@^6.0.0:
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/cordova-plugin-file/-/cordova-plugin-file-6.0.0.tgz#9ae08ddbbc0cf33ea06ec303d5ebc55698d760aa"
+
+cordova-plugin-inappbrowser@^1.7.2:
+  version "1.7.2"
+  resolved "https://registry.yarnpkg.com/cordova-plugin-inappbrowser/-/cordova-plugin-inappbrowser-1.7.2.tgz#64763495be87eb2e7adb1a08f0209b96ea5ceee0"
 
 cordova-plugin-ionic-webview@^1.1.16:
   version "1.1.16"

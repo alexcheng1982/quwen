@@ -1,4 +1,8 @@
 quwen-item {
+  h2 {
+    cursor: pointer;
+    color: map-get($colors, primary);
+  }
   .meta {
     display: flex;
     justify-content: space-between;

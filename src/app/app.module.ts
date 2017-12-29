@@ -9,9 +9,11 @@ import { WechatPopularPage } from '../pages/wechat-popular/wechat-popular'
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HTTP } from '@ionic-native/http';
+import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { ItemsListComponent } from '../components/items-list/items-list';
 import { ItemComponent } from '../components/item/item';
 import { ItemsListService } from "../services/ItemsListService";
+import { OpenPageService } from "../services/OpenPageService";
 
 @NgModule({
   declarations: [
@@ -37,8 +39,10 @@ import { ItemsListService } from "../services/ItemsListService";
     StatusBar,
     SplashScreen,
     HTTP,
+    InAppBrowser,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ItemsListService,
+    OpenPageService,
   ]
 })
 export class AppModule {}
