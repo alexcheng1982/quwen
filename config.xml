@@ -86,4 +86,5 @@
     <plugin name="cordova-plugin-advanced-http" spec="^1.9.0" />
     <allow-navigation href="http://192.168.1.7:8100" />
     <plugin name="cordova-plugin-inappbrowser" spec="^1.7.2" />
+    <plugin name="cordova-plugin-x-socialsharing" spec="^5.2.1" />
 </widget>

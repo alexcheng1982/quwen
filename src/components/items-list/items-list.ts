@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { ItemsList } from '../../models/item';
 import { OpenPageService } from "../../services/OpenPageService";
+import { SharingService } from "../../services/SharingService";
 
 @Component({
   selector: 'quwen-items-list',
@@ -8,11 +9,16 @@ import { OpenPageService } from "../../services/OpenPageService";
 })
 export class ItemsListComponent {
 
-  constructor(private openPageService: OpenPageService) {}
+  constructor(private openPageService: OpenPageService,
+              private sharingService: SharingService) {}
 
   @Input() itemsList: ItemsList;
 
-  onOpen(url: string) : void {
+  onOpen(url: string): void {
     this.openPageService.open(url);
+  }
+
+  onShare(url: string, message: string): void {
+    this.sharingService.share(url, message);
   }
 }

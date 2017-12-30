@@ -1,5 +1,8 @@
 <ion-list *ngIf="itemsList">
   <ion-item text-wrap *ngFor="let item of itemsList.items">
     <quwen-item [item]="item" (onOpen)="onOpen($event)"></quwen-item>
+    <button ion-button icon-only clear item-end (click)="onShare(item.url, item.title)">
+      <ion-icon name="share"></ion-icon>
+    </button>
   </ion-item>
 </ion-list>

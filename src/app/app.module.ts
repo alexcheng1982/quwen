@@ -10,10 +10,12 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HTTP } from '@ionic-native/http';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
+import { SocialSharing } from '@ionic-native/social-sharing';
 import { ItemsListComponent } from '../components/items-list/items-list';
 import { ItemComponent } from '../components/item/item';
 import { ItemsListService } from "../services/ItemsListService";
 import { OpenPageService } from "../services/OpenPageService";
+import { SharingService } from "../services/SharingService";
 
 @NgModule({
   declarations: [
@@ -40,9 +42,11 @@ import { OpenPageService } from "../services/OpenPageService";
     SplashScreen,
     HTTP,
     InAppBrowser,
+    SocialSharing,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ItemsListService,
     OpenPageService,
+    SharingService,
   ]
 })
 export class AppModule {}
