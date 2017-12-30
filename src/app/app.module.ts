@@ -16,6 +16,7 @@ import { ItemComponent } from '../components/item/item';
 import { ItemsListService } from "../services/ItemsListService";
 import { OpenPageService } from "../services/OpenPageService";
 import { SharingService } from "../services/SharingService";
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { SharingService } from "../services/SharingService";
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
